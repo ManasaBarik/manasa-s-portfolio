@@ -11,7 +11,7 @@ import ParticleBackground from "@/components/ParticleBackground";
 
 const Index = () => {
   return (
-    <div className="relative min-h-screen bg-background">
+    <div className="relative min-h-screen bg-background noise-overlay">
       <ParticleBackground />
       <Navbar />
       <main className="relative z-10">
