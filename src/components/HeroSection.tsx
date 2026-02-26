@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, FileText, Mail, Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
+import profilePhoto from "@/assets/profile-photo.jpeg";
 
 const roles = [
   "Full-Stack Developer",
