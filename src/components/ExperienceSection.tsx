@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Calendar, MapPin } from "lucide-react";
+import { Calendar, MapPin, ArrowUpRight } from "lucide-react";
 
 const experiences = [
   {
@@ -15,6 +15,7 @@ const experiences = [
       "Focused on real-time threat detection, pattern analysis, and visualization",
     ],
     tech: ["Python", "Flask", "JavaScript", "Chart.js", "REST APIs"],
+    color: "primary",
   },
   {
     company: "Indian Oil Corporation Limited",
@@ -28,6 +29,7 @@ const experiences = [
       "Implemented PPE verification, audit logs, and centralized logging",
     ],
     tech: ["Django", "Python", "OpenCV", "SQLite", "Face Recognition"],
+    color: "secondary",
   },
 ];
 
@@ -36,59 +38,62 @@ const ExperienceSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="experience" className="py-28 relative">
-      <div className="section-divider mb-28" />
+    <section id="experience" className="py-32 relative">
+      <div className="section-divider mb-32" />
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
+          className="text-center mb-16"
         >
-          <span className="section-label">Experience</span>
+          <span className="section-label justify-center">Experience</span>
           <h2 className="section-heading">
             Where I've <span className="gradient-text">Made Impact</span>
           </h2>
         </motion.div>
 
-        {/* Timeline layout */}
-        <div className="mt-14 relative">
-          {/* Timeline line */}
-          <div className="absolute left-6 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-primary/40 via-secondary/30 to-transparent hidden md:block" />
+        <div className="grid md:grid-cols-2 gap-8">
+          {experiences.map((exp, i) => (
+            <motion.div
+              key={exp.company}
+              initial={{ opacity: 0, y: 40, rotateX: 5 }}
+              animate={isInView ? { opacity: 1, y: 0, rotateX: 0 } : {}}
+              transition={{ duration: 0.8, delay: 0.2 + i * 0.2 }}
+              className="group"
+            >
+              <div className="glass-card-hover p-8 h-full relative overflow-hidden">
+                {/* Top accent */}
+                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-${exp.color} via-${exp.color}/50 to-transparent`} />
+                
+                {/* Company number */}
+                <span className="absolute top-6 right-6 text-6xl font-display font-bold text-muted/30 select-none">
+                  0{i + 1}
+                </span>
 
-          <div className="space-y-10">
-            {experiences.map((exp, i) => (
-              <motion.div
-                key={exp.company}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.7, delay: 0.2 + i * 0.2 }}
-                className="relative md:pl-20"
-              >
-                {/* Timeline dot */}
-                <div className="absolute left-4 md:left-6 top-8 w-4 h-4 rounded-full border-2 border-primary bg-background z-10 hidden md:block">
-                  <div className="absolute inset-1 rounded-full bg-primary animate-pulse-glow" />
-                </div>
-
-                <div className="glass-card-hover p-6 md:p-8">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-5">
-                    <div>
-                      <h3 className="text-xl font-display font-bold">{exp.company}</h3>
-                      <p className="text-primary font-medium text-sm mt-1">{exp.role}</p>
-                    </div>
-                    <div className="flex flex-col gap-1.5 text-xs text-muted-foreground md:text-right shrink-0">
-                      <span className="flex items-center gap-1.5 md:justify-end font-mono">
-                        <Calendar size={12} /> {exp.period}
-                      </span>
-                      <span className="flex items-center gap-1.5 md:justify-end">
-                        <MapPin size={12} /> {exp.location}
-                      </span>
-                    </div>
+                <div className="relative">
+                  <div className="mb-6">
+                    <h3 className="text-xl font-display font-bold mb-1 group-hover:text-primary transition-colors">
+                      {exp.company}
+                    </h3>
+                    <p className={`text-${exp.color} font-medium text-sm`}>{exp.role}</p>
                   </div>
 
-                  <ul className="space-y-2.5 mb-6">
+                  <div className="flex flex-wrap gap-3 text-xs text-muted-foreground mb-6">
+                    <span className="flex items-center gap-1.5 font-mono">
+                      <Calendar size={12} /> {exp.period}
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <MapPin size={12} /> {exp.location}
+                    </span>
+                  </div>
+
+                  <ul className="space-y-3 mb-6">
                     {exp.description.map((item) => (
                       <li key={item} className="text-muted-foreground text-sm flex gap-3">
-                        <span className="text-primary mt-0.5 shrink-0 text-xs">●</span>
+                        <span className="text-primary mt-1 shrink-0">
+                          <ArrowUpRight size={12} />
+                        </span>
                         {item}
                       </li>
                     ))}
@@ -100,9 +105,9 @@ const ExperienceSection = () => {
                     ))}
                   </div>
                 </div>
-              </motion.div>
-            ))}
-          </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
