@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, FileText, Mail, Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
+import profilePhoto from "@/assets/profile-photo.jpeg";
 
 const roles = [
   "Full-Stack Developer",
@@ -43,11 +44,13 @@ const HeroSection = () => {
             className="mb-10"
           >
             <div className="relative">
-              <div className="w-28 h-28 md:w-36 md:h-36 rounded-full gradient-border bg-muted flex items-center justify-center animate-float overflow-hidden">
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/10 flex items-center justify-center">
-                  <span className="text-4xl md:text-5xl font-display font-bold gradient-text">MB</span>
+                <div className="w-28 h-28 md:w-36 md:h-36 rounded-full gradient-border bg-muted flex items-center justify-center animate-float overflow-hidden">
+                  <img 
+                    src={profilePhoto} 
+                    alt="Manasa Barik – Full-Stack Developer" 
+                    className="w-full h-full rounded-full object-cover object-top"
+                  />
                 </div>
-              </div>
               {/* Status indicator */}
               <div className="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-background border-2 border-border flex items-center justify-center">
                 <div className="w-3 h-3 rounded-full bg-primary animate-pulse" />
