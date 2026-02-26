@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Github, Linkedin, Mail, Send, ArrowUpRight } from "lucide-react";
+import { Github, Linkedin, Mail, Send, ArrowUpRight, MapPin } from "lucide-react";
 
 const socials = [
   {
@@ -35,11 +35,11 @@ const ContactSection = () => {
   };
 
   const inputClass =
-    "w-full px-4 py-3.5 bg-muted/30 border border-border/60 rounded-xl text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/40 focus:ring-2 focus:ring-primary/10 transition-all duration-300 text-sm";
+    "w-full px-5 py-4 bg-muted/20 border border-border/40 rounded-2xl text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-primary/40 focus:ring-2 focus:ring-primary/10 transition-all duration-300 text-sm backdrop-blur-sm";
 
   return (
-    <section id="contact" className="py-28 relative">
-      <div className="section-divider mb-28" />
+    <section id="contact" className="py-32 relative">
+      <div className="section-divider mb-32" />
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -63,7 +63,7 @@ const ContactSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2 }}
-            className="lg:col-span-3 space-y-5"
+            className="lg:col-span-3 glass-card p-8 space-y-5"
           >
             <div className="grid sm:grid-cols-2 gap-5">
               <input
@@ -106,6 +106,17 @@ const ContactSection = () => {
             transition={{ delay: 0.3 }}
             className="lg:col-span-2 flex flex-col gap-4"
           >
+            {/* Location card */}
+            <div className="glass-card p-5 flex items-center gap-4">
+              <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
+                <MapPin className="text-accent" size={18} />
+              </div>
+              <div>
+                <p className="text-xs text-muted-foreground mb-0.5">Location</p>
+                <p className="font-medium text-sm">Bhadrak, Odisha, India</p>
+              </div>
+            </div>
+
             {socials.map((s) => (
               <a
                 key={s.label}
