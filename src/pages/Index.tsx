@@ -9,6 +9,7 @@ import CertificationsSection from "@/components/CertificationsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
+import SectionTransition from "@/components/SectionTransition";
 
 const Scene3D = lazy(() => import("@/components/Scene3D"));
 
@@ -22,14 +23,28 @@ const Index = () => {
       <Navbar />
       <main className="relative z-10">
         <HeroSection />
-        <AboutSection />
-        <ExperienceSection />
-        <ProjectsSection />
-        <SkillsSection />
-        <CertificationsSection />
-        <ContactSection />
+        <SectionTransition direction="up">
+          <AboutSection />
+        </SectionTransition>
+        <SectionTransition direction="right" delay={0.05}>
+          <ExperienceSection />
+        </SectionTransition>
+        <SectionTransition direction="left" delay={0.05}>
+          <ProjectsSection />
+        </SectionTransition>
+        <SectionTransition direction="up">
+          <SkillsSection />
+        </SectionTransition>
+        <SectionTransition direction="right" delay={0.05}>
+          <CertificationsSection />
+        </SectionTransition>
+        <SectionTransition direction="up">
+          <ContactSection />
+        </SectionTransition>
       </main>
-      <Footer />
+      <SectionTransition direction="up">
+        <Footer />
+      </SectionTransition>
     </div>
   );
 };
