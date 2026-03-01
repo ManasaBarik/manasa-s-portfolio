@@ -5,6 +5,7 @@ import AboutSection from "@/components/AboutSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import SkillsSection from "@/components/SkillsSection";
+import EducationSection from "@/components/EducationSection";
 import CertificationsSection from "@/components/CertificationsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -34,6 +35,9 @@ const Index = () => {
         </SectionTransition>
         <SectionTransition direction="up">
           <SkillsSection />
+        </SectionTransition>
+        <SectionTransition direction="left" delay={0.05}>
+          <EducationSection />
         </SectionTransition>
         <SectionTransition direction="right" delay={0.05}>
           <CertificationsSection />
