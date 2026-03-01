@@ -3,10 +3,10 @@ import { useRef } from "react";
 import { GraduationCap, Briefcase, Code2, Brain, ArrowUpRight } from "lucide-react";
 
 const highlights = [
-  { icon: GraduationCap, label: "B.Tech CSE", sub: "2023–2027", gradient: "from-primary/20 to-primary/5" },
-  { icon: Briefcase, label: "2 Internships", sub: "Infosys · IOCL", gradient: "from-secondary/20 to-secondary/5" },
-  { icon: Code2, label: "Full-Stack", sub: "Python · React · Django", gradient: "from-primary/20 to-secondary/5" },
-  { icon: Brain, label: "AI & Analytics", sub: "ML · Data · Security", gradient: "from-accent/20 to-accent/5" },
+  { icon: GraduationCap, label: "B.Tech CSE (DS)", sub: "GIET University · 2023–2027", gradient: "from-primary/20 to-primary/5" },
+  { icon: Briefcase, label: "4 Internships", sub: "Infosys · IOCL · Hebbale · YHills", gradient: "from-secondary/20 to-secondary/5" },
+  { icon: Code2, label: "Full-Stack", sub: "Python · Django · React", gradient: "from-primary/20 to-secondary/5" },
+  { icon: Brain, label: "Data Science", sub: "Power BI · Analysis · ML", gradient: "from-accent/20 to-accent/5" },
 ];
 
 const AboutSection = () => {
@@ -60,18 +60,20 @@ const AboutSection = () => {
             <div className="glass-card p-8 md:p-10 space-y-6">
               <p className="text-muted-foreground leading-relaxed text-lg">
                 I'm <span className="text-foreground font-semibold">Manasa Barik</span>, a B.Tech Computer Science
-                student (2023–2027) from Bhadrak, Odisha. I build robust, scalable systems
-                that bridge web development with data intelligence.
+                Engineering student specializing in Data Science at{" "}
+                <span className="text-primary font-medium">GIET University, Gunupur</span> (2023–2027),
+                based in Bhubaneswar, Odisha.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Through internships at <span className="text-primary font-medium">Infosys Springboard</span> and{" "}
-                <span className="text-primary font-medium">Indian Oil Corporation</span>, I've shipped
-                real-time cyber threat dashboards, industrial safety automation, and RESTful APIs
-                powering production systems.
+                Through internships at <span className="text-primary font-medium">Infosys Springboard</span>,{" "}
+                <span className="text-primary font-medium">Indian Oil Corporation (IOCL)</span>,{" "}
+                <span className="text-primary font-medium">Hebbale Academy</span>, and{" "}
+                <span className="text-primary font-medium">YHills</span>, I've built real-time cyber threat
+                dashboards, industrial safety automation systems, and AI-powered applications.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                My stack spans Python, Django, Flask, React, MySQL, and OpenCV — with deep
-                interest in AI, analytics, automation, and security.
+                My stack spans Python, Django, Flask, React, OpenCV, and Power BI — with deep
+                interest in Data Science, analytics, computer vision, and secure system design.
               </p>
               <div className="pt-2 flex gap-6">
                 <a href="#experience" className="inline-flex items-center gap-2 text-primary font-medium text-sm hover:gap-3 transition-all duration-300">

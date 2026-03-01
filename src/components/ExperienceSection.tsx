@@ -5,8 +5,8 @@ import { Calendar, MapPin, ArrowUpRight } from "lucide-react";
 const experiences = [
   {
     company: "Infosys Springboard",
-    role: "Software Development Intern",
-    period: "Feb 2025 – Present",
+    role: "Intern",
+    period: "Feb 2026 – Present",
     location: "Remote",
     description: [
       "Built a Cyber Threat Visualization Dashboard for real-time threat monitoring",
@@ -18,17 +18,41 @@ const experiences = [
     color: "primary",
   },
   {
-    company: "Indian Oil Corporation Limited",
+    company: "Indian Oil Corporation Limited (IOCL)",
     role: "Winter Intern",
     period: "Dec 2025 – Jan 2026",
-    location: "Bhadrak, Odisha",
+    location: "Guwahati, Assam",
     description: [
-      "Developed SPARK — Smart Permit & Risk Knowledge System",
-      "Built digital permit workflow system using Django with RBAC",
-      "Integrated Face Recognition using OpenCV for gate validation",
-      "Implemented PPE verification, audit logs, and centralized logging",
+      "Developed SPARK — Smart Permit, Access, and Risk Kontrol System",
+      "Built digital permit workflow with multi-level verification (User → CISF → Admin)",
+      "Implemented Face Recognition using OpenCV for secure identity verification",
+      "Integrated PPE verification, audit logs, and centralized attendance automation",
     ],
-    tech: ["Django", "Python", "OpenCV", "SQLite", "Face Recognition"],
+    tech: ["Django", "Python", "OpenCV", "SQLite", "Computer Vision"],
+    color: "secondary",
+  },
+  {
+    company: "Hebbale Academy",
+    role: "Summer Intern",
+    period: "May 2025 – Jul 2025",
+    location: "Remote",
+    description: [
+      "Gained hands-on experience in software development practices",
+      "Worked on real-world projects and collaborative development workflows",
+    ],
+    tech: ["Web Development", "Software Engineering"],
+    color: "primary",
+  },
+  {
+    company: "YHills",
+    role: "Intern",
+    period: "Jun 2024 – Jul 2024",
+    location: "Odisha, India",
+    description: [
+      "Completed project-based internship focused on practical skill development",
+      "Collaborated with teams on technology-driven solutions",
+    ],
+    tech: ["Python", "Web Technologies"],
     color: "secondary",
   },
 ];

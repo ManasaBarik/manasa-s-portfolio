@@ -5,7 +5,7 @@ import profilePhoto from "@/assets/profile-photo.jpeg";
 
 const roles = [
   "Full-Stack Developer",
-  "Data Analytics Enthusiast",
+  "Data Science Specialist",
   "AI Systems Builder",
 ];
 
@@ -69,8 +69,8 @@ const HeroSection = () => {
               transition={{ delay: 0.6 }}
               className="text-muted-foreground text-base md:text-lg mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0"
             >
-              Crafting production-ready web systems, RESTful APIs, and AI-powered
-              applications — from cyber threat dashboards to industrial automation.
+              B.Tech CSE (Data Science) at GIET University — building production-ready
+              web systems, AI-powered applications, and data-driven solutions.
             </motion.p>
 
             <motion.div
@@ -82,7 +82,7 @@ const HeroSection = () => {
               <a href="#projects" className="glow-button inline-flex items-center gap-2 text-sm">
                 <ArrowDown size={16} /> View Projects
               </a>
-              <a href="#" className="glow-button-outline inline-flex items-center gap-2 text-sm">
+              <a href="/Profile.pdf" target="_blank" rel="noopener noreferrer" className="glow-button-outline inline-flex items-center gap-2 text-sm">
                 <FileText size={16} /> Resume
               </a>
               <a href="#contact" className="glow-button-outline inline-flex items-center gap-2 text-sm">
