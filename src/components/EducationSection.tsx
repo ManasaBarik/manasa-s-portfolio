@@ -125,6 +125,14 @@ const EducationSection = () => {
                       </div>
                     )}
 
+                    {"cgpa" in edu && edu.cgpa && (
+                      <div className={`flex items-center gap-2 mb-4 ${i % 2 === 0 ? "md:justify-end" : ""}`}>
+                        <span className={`tech-badge text-${edu.accentColor} border-${edu.accentColor}/20 bg-${edu.accentColor}/10 font-semibold`}>
+                          {edu.cgpa}
+                        </span>
+                      </div>
+                    )}
+
                     {"status" in edu && edu.status && (
                       <div className={`flex items-center gap-2 mb-4 ${i % 2 === 0 ? "md:justify-end" : ""}`}>
                         <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono">
