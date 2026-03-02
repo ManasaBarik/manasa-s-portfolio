@@ -19,10 +19,9 @@ const skillCategories = [
     icon: Globe,
     color: "secondary",
     skills: [
-      { name: "React", icon: "⚛️" },
-      { name: "Django", icon: "🎯" },
-      { name: "Flask", icon: "🧪" },
       { name: "HTML/CSS", icon: "🎨" },
+      { name: "React JS", icon: "⚛️" },
+      { name: "Django", icon: "🎯" },
     ],
   },
   {
@@ -31,7 +30,6 @@ const skillCategories = [
     color: "accent",
     skills: [
       { name: "MySQL", icon: "🗄️" },
-      { name: "SQLite", icon: "📦" },
     ],
   },
   {
@@ -40,10 +38,9 @@ const skillCategories = [
     color: "primary",
     skills: [
       { name: "Data Analysis", icon: "📊" },
-      { name: "RESTful APIs", icon: "🔗" },
       { name: "Face Recognition", icon: "👁️" },
-      { name: "Automation", icon: "🤖" },
-      { name: "Power BI", icon: "📈" },
+      { name: "Workflow Automation", icon: "🤖" },
+      { name: "RESTful APIs", icon: "🔗" },
     ],
   },
 ];

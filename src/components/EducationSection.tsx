@@ -9,29 +9,30 @@ const education = [
     institution: "GIET University, Gunupur",
     period: "2023 – 2027",
     status: "Pursuing",
+    cgpa: "CGPA: 7.23",
     icon: "🎓",
     gradient: "from-primary/20 to-secondary/10",
     accentColor: "primary",
     coursework: ["Data Structures & Algorithms", "Machine Learning", "Database Systems", "Computer Vision", "Web Development"],
   },
   {
-    degree: "Higher Secondary (+2)",
+    degree: "Higher Secondary (12th)",
     specialization: "Science",
     institution: "AIMS Higher Secondary School",
     board: "CHSE, Odisha",
-    period: "2023",
+    period: "2021 – 2023",
     percentage: "74%",
     icon: "📘",
     gradient: "from-secondary/20 to-accent/10",
     accentColor: "secondary",
   },
   {
-    degree: "Matriculation (10th)",
+    degree: "Secondary (10th)",
     specialization: "",
-    institution: "A.A High School, Deogarh",
+    institution: "A.A. High School",
     board: "BSE, Odisha",
-    period: "2021",
-    percentage: "81%",
+    period: "2020 – 2021",
+    percentage: "82%",
     icon: "📗",
     gradient: "from-accent/20 to-primary/10",
     accentColor: "accent",
@@ -120,6 +121,14 @@ const EducationSection = () => {
                       <div className={`flex items-center gap-2 mb-4 ${i % 2 === 0 ? "md:justify-end" : ""}`}>
                         <span className={`tech-badge text-${edu.accentColor} border-${edu.accentColor}/20 bg-${edu.accentColor}/10 font-semibold`}>
                           {edu.percentage}
+                        </span>
+                      </div>
+                    )}
+
+                    {"cgpa" in edu && edu.cgpa && (
+                      <div className={`flex items-center gap-2 mb-4 ${i % 2 === 0 ? "md:justify-end" : ""}`}>
+                        <span className={`tech-badge text-${edu.accentColor} border-${edu.accentColor}/20 bg-${edu.accentColor}/10 font-semibold`}>
+                          {edu.cgpa}
                         </span>
                       </div>
                     )}

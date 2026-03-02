@@ -5,7 +5,7 @@ import { Award, ExternalLink } from "lucide-react";
 const certifications = [
   { title: "Python for Data Science", issuer: "NPTEL", icon: "🐍", gradient: "from-primary/15 to-primary/5" },
   { title: "Data Science", issuer: "Infosys Springboard", icon: "📊", gradient: "from-secondary/15 to-secondary/5" },
-  { title: "Power BI Foundation", issuer: "Infosys Springboard", icon: "📈", gradient: "from-accent/15 to-accent/5" },
+  { title: "TechA Data Analytics using Power BI Foundation", issuer: "Infosys Springboard", icon: "📈", gradient: "from-accent/15 to-accent/5" },
 ];
 
 const CertificationsSection = () => {

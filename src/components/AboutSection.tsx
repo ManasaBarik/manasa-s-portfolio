@@ -4,7 +4,7 @@ import { GraduationCap, Briefcase, Code2, Brain, ArrowUpRight } from "lucide-rea
 
 const highlights = [
   { icon: GraduationCap, label: "B.Tech CSE (DS)", sub: "GIET University · 2023–2027", gradient: "from-primary/20 to-primary/5" },
-  { icon: Briefcase, label: "4 Internships", sub: "Infosys · IOCL · Hebbale · YHills", gradient: "from-secondary/20 to-secondary/5" },
+  { icon: Briefcase, label: "2 Internships", sub: "Infosys Springboard · IOCL", gradient: "from-secondary/20 to-secondary/5" },
   { icon: Code2, label: "Full-Stack", sub: "Python · Django · React", gradient: "from-primary/20 to-secondary/5" },
   { icon: Brain, label: "Data Science", sub: "Power BI · Analysis · ML", gradient: "from-accent/20 to-accent/5" },
 ];
@@ -62,14 +62,12 @@ const AboutSection = () => {
                 I'm <span className="text-foreground font-semibold">Manasa Barik</span>, a B.Tech Computer Science
                 Engineering student specializing in Data Science at{" "}
                 <span className="text-primary font-medium">GIET University, Gunupur</span> (2023–2027),
-                based in Bhubaneswar, Odisha.
+                based in Bhadrak, Odisha.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Through internships at <span className="text-primary font-medium">Infosys Springboard</span>,{" "}
-                <span className="text-primary font-medium">Indian Oil Corporation (IOCL)</span>,{" "}
-                <span className="text-primary font-medium">Hebbale Academy</span>, and{" "}
-                <span className="text-primary font-medium">YHills</span>, I've built real-time cyber threat
-                dashboards, industrial safety automation systems, and AI-powered applications.
+                Through internships at <span className="text-primary font-medium">Infosys Springboard</span> and{" "}
+                <span className="text-primary font-medium">Indian Oil Corporation (IOCL)</span>, I've built
+                real-time cyber threat dashboards, industrial safety automation systems, and AI-powered applications.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 My stack spans Python, Django, Flask, React, OpenCV, and Power BI — with deep
