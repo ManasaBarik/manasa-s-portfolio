@@ -113,7 +113,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="text-xs text-muted-foreground mb-0.5">Location</p>
-                <p className="font-medium text-sm">Bhubaneswar, Odisha, India</p>
+                <p className="font-medium text-sm">Bhadrak, Odisha, India</p>
               </div>
             </div>
 

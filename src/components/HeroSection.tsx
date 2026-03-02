@@ -69,8 +69,8 @@ const HeroSection = () => {
               transition={{ delay: 0.6 }}
               className="text-muted-foreground text-base md:text-lg mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0"
             >
-              B.Tech CSE (Data Science) at GIET University — building production-ready
-              web systems, AI-powered applications, and data-driven solutions.
+              Enthusiastic developer with experience in building web-based dashboards
+              and RESTful APIs using Python and JavaScript. B.Tech CSE (Data Science) at GIET University.
             </motion.p>
 
             <motion.div
